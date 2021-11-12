@@ -48,6 +48,9 @@ console.log(costoViaggio);
 // Variabile sconto
 let discount = (costoViaggio / 100) * 20;
 
+
+
+
 // Imposto ciclo If
 if (userAge < 18) {
     costoFinale = costoViaggio - discount;
@@ -59,12 +62,14 @@ else {
     costoFinale = costoViaggio;
     }
 
+// Limito le cifre decimali a 2
+let finalPrice = costoFinale.toFixed(2);
 
 // Concateno le stringhe
-const result ='Ciao il tuo viaggio costerà: ' +  costoFinale  + '€';
-//  console.log(result);
+const message ='Ciao il tuo viaggio costerà: ' +  finalPrice  + '€';
+//  console.log(message);
 
 // Mando a schermo il risultato
-alert(result);
+alert(message);
 
-// document.getElementById('final-price').innerHTML = result;
+// document.getElementById('final-price').innerHTML = message;
